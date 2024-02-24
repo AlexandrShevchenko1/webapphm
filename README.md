@@ -72,3 +72,8 @@ config.setPassword("your_password");
 4. Deploy the application to a servlet container like Tomcat.
 
 For contributors and users looking to run the application locally, ensure all dependencies are resolved, and follow the running instructions detailed above.
+
+## Additional information
+1. The DataConnectionPool class implements the Singleton pattern. The DataConnectionPool class initializes a HikariDataSource instance once and reuses it throughout the application.
+2. The repositories like OrderRepository, DishRepository, and ReviewRepository follow the Data Access Object pattern. This pattern provides an abstract interface to some type of database or other persistence mechanism.
+3. Java Servlets and JSP inherently follow the MVC pattern. The JSP files act as the View, the Servlets act as the Controller, and the Java classes used for handling data (like Order, Dish, User, etc.) represent the Model.
