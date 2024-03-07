@@ -15,8 +15,9 @@ CREATE TABLE orders (
     dishId INT NOT NULL,
     orderDateTime TIMESTAMP NOT NULL,
     status VARCHAR(255),
-    FOREIGN KEY (userId) REFERENCES users(userId),
-    FOREIGN KEY (dishId) REFERENCES dishes(dishId)
+    quantity INT NOT NUll,
+    FOREIGN KEY (userId) REFERENCES users(id),
+    FOREIGN KEY (dishId) REFERENCES dishes(id)
 );
 
 -- Create dishes table
